@@ -4,8 +4,9 @@ public class DefaultCounterOutRhymer {
 
 	private static final int NUMBERS_LEN = 12;
 	private static final int DEFAULT_TOTAL = -1;
+	private static final int NOT_FOUND = -1;
 
-	private int[] NUMBERS = new int[NUMBERS_LEN];
+	private final int[] NUMBERS = new int[NUMBERS_LEN];
 
 	private int total = DEFAULT_TOTAL;
 
@@ -19,18 +20,18 @@ public class DefaultCounterOutRhymer {
 	}
 		
 	protected boolean isFull() {
-		return total == 11;
+		return total == NUMBERS_LEN - 1;
 	}
 		
 	protected int peekaboo() {
 		if (callCheck())
-			return DEFAULT_TOTAL;
+			return NOT_FOUND;
 		return NUMBERS[total];
 	}
 			
 	protected int countOut() {
 		if (callCheck())
-			return DEFAULT_TOTAL;
+			return NOT_FOUND;
 		return NUMBERS[total--];
 	}
 
