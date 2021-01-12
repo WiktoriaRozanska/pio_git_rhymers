@@ -3,19 +3,19 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 
-class RhymersDemo {
+final class RhymersDemo {
 
 	public static void main(String[] args) {
-		RhymersFactory factory = new DefaultRhymersFactory();
+		final RhymersFactory factory = new DefaultRhymersFactory();
 		
-		DefaultCounterOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
+		final DefaultCounterOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
 				factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
 		
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
 				rhymers[j].countIn(i);
 		
-		java.util.Random rn = new java.util.Random();
+		final java.util.Random rn = new java.util.Random();
 		for (int i = 1; i < 15; i++)
 			rhymers[3].countIn(rn.nextInt(20));
 		
