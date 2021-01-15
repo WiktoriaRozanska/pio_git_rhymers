@@ -7,7 +7,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountIn() {
-		DefaultCounterOutRhymer rhymer = new DefaultCounterOutRhymer();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		int testValue = 4;
 		rhymer.countIn(testValue);
 
@@ -17,7 +17,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		DefaultCounterOutRhymer rhymer = new DefaultCounterOutRhymer();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		boolean result = rhymer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -29,7 +29,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testIsFull() {
-		DefaultCounterOutRhymer rhymer = new DefaultCounterOutRhymer();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
@@ -43,7 +43,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testPeekaboo() {
-		DefaultCounterOutRhymer rhymer = new DefaultCounterOutRhymer();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.peekaboo();
@@ -60,7 +60,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		DefaultCounterOutRhymer rhymer = new DefaultCounterOutRhymer();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
