@@ -21,7 +21,7 @@ public final class IntLinkedList {
 
 	protected boolean isFull() {
 		return false;
-	}
+	} //TODO: needs adding condition
 
 	protected int top() {
 		if (isEmpty())
