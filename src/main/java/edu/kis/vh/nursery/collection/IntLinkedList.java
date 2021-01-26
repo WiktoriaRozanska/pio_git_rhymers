@@ -1,7 +1,6 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.collection;
 
-public class IntLinkedList {
-
+public class IntLinkedList implements Stack {
 	Node last;
 	int i;
 
@@ -25,16 +24,27 @@ public class IntLinkedList {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return NOT_FOUND;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return NOT_FOUND;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
+	}
+
+}
+
+class Node {
+
+	public int value;
+	public Node prev, next;
+
+	public Node(int i) {
+		value = i;
 	}
 
 }
